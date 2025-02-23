@@ -9,7 +9,7 @@ def hello(n):
         n -= 1
         time.sleep(3)
         
-# sazdavane i startirane na nishka
+
 from threading import Thread
 t = Thread(target = hello, args = (100, ))
 t.start()
@@ -48,17 +48,15 @@ class IOThread:
         self._live = False
         
     def start(self, sock):
-        sock.settimeout(5)  # ustanoviavane na taimaut
+        sock.settimeout(5)
         while self._live:
-            # izpylnenie na blokirashta operacia I/O s taimaut
+
             try:
                 data = sock.recv(4096)
                 break
             except socket.timeout:
                 continue
-            # prodyljavane na rabotata
             #...
-        # zavyrsheno
         return
     
 
@@ -93,23 +91,19 @@ t.start()
 from queue import Queue 
 from threading import Thread 
 
-# nishka, koiato proivejda dannite 
+
 def transmitter(out_s):
     while True:
-        # izvejdane na dannite
         # ...
         out_s.put(data) 
 
-# nishka, koiato priema dannite
+
 def receiver(in_s):
     while True:
-        # poluchavane na dannite
         data = in_s.get()
-        
-        # obrabotvane na dannite 
         # ...
         
-# syzdavane na spodelena opashka i startirane na dvete nishki
+
 q1 = Queue()
 t1 = Thread(target = transmitter, args = (q, ))
 t2 = Thread(target = receiver, args = (q, ))
@@ -121,29 +115,23 @@ t2.start()
 from queue import Queue
 from threading import Thread 
 
-# obekti, koito syobshtavat za prekratiavane
-# (singnalen marker)
+
 _signal = object() 
 
 def transmitter(out_s):
     while running:
-        # generirane na niakakvi danni
         # ...
         out _s. put(data) 
-        # postaviane na signalnia marker v opashkata - tova 
-        # e signal za prekratiavane
         out_s.put(_signal)
 
-# nishkata, koiato potrebiava dannite
+
 def receiver(in_s):
     while True:
-        # poluchavane na dannite
         data = in_s.get()
-        # proverka za prekratiavane
+
         if data is _signal:
             in_s.put(_signal)
             break
-        # obrabotvane
     # ...
     
 
@@ -153,15 +141,12 @@ import copy
 
 def transmitter(out_s):
     while running:
-        # generirane na danni
         # ...
         out _s. put(copy.deepcopy(data))
 
 def receiver(in_s):
     while True:
-        # poluchavane na dannite
         data = in_s.get()
-        # obrabotvane na dannite
         # ...
 
 import queue 
@@ -194,7 +179,6 @@ def receiver(q):
     while _running:
         try:
             item = q.get(timeout = 10.0)
-            # obrabotvane na elementa
             # ...
         except queue.Empty:
             pass
