@@ -102,7 +102,7 @@ class Sample:
 
 class ReloadClass:
     def __init__(self):
-        slef.x = 0
+        self.x = 0
         self.a = [1, 2, 3]
     
     def __eq__(self, x):
@@ -148,7 +148,7 @@ print(o.get_property())         # will output 20
 
 
 class PropertySampleClass:
-    def __init__(slef, x):
+    def __init__(self, x):
         self.__p = x
         
     def get_p(self):
@@ -175,7 +175,7 @@ def deco(d):
 @deco
 class SampleClass:
     def __init__(self, value):
-        slef.v = value
+        self.v = value
         
 o = SampleClass(1)
 print(o.v)
