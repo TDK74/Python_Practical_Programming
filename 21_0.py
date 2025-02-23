@@ -5,13 +5,13 @@ import sys
 from PyQt4.QtCore import pyqtSlot
 from PyQt4.QtGui import *
 
-# syzdavame prilojenie i prozorec
+
 app = QApplication(sys.argv)
 
 w = QWidget()
 w.setWindowTitle('Sample')
 
-# buton
+
 btn = QPushButton('Click me', w)
 
 @pyqtSlot()
@@ -29,12 +29,12 @@ def on_release():
     ''' izvikva se, kogato butona se otpusne.'''
     print('released')
     
-# saediniavane na signalite s tehnite slotove
+
 btn.clicked.connect(on_click)
 btn.pressed.connect(on_press)
 btn.released.connect(on_release)
 
-# pokazvame prozoreca i startirame prilojenieto
+
 w.show()
 app.exec_()
 
@@ -67,9 +67,9 @@ if __name__ == "__main__":
     
 
 
-QtGui.grabShortcut(QtGui.QKeySequence("Ctrl+A"))    # reagirane na klavishna kombinacia
+QtGui.grabShortcut(QtGui.QKeySequence("Ctrl+A"))
 
-self.edit1.setFocus()   # zadavane na fokus v pole za vavejdane
+self.edit1.setFocus()
 
 
 
@@ -84,7 +84,7 @@ class Window(QtGui.QMainWindow):
         self.list = QtGui.QListWidget(self)
         layout.addWidget(self.edit)
         layout.addWidget(self.list)
-        slef.setCentralWidget(widget)
+        self.setCentralWidget(widget)
         
     def eventFilter(self, source, event):
         if event.type() == QtCore.QEvent.MouseMove:
