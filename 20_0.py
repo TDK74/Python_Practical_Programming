@@ -5,8 +5,6 @@ import sys
 from PyQt4 import QtGui
 
 def main():
-    # predavane na argumentite na prilojenieto,
-    # ukazani v komandnia red
     
     app = QtGui.QApplication(sys.argv)
     
@@ -59,9 +57,8 @@ def main():
     
     app = QtGui.QApplication(sys.argv)
     
-    # zadavame shrifta
     QtGui.QToolTip.setFont(QtGui.QFont('Arial', 14))
-    # parametri na prozoreca
+
     window = QtGui.QWidget()
     window.setToolTip('This is a window.')
     window.resize(300, 300)
@@ -70,7 +67,7 @@ def main():
     window.setWindowTitle('Example')
     window.setWindowIcon(QtGui.QIcon('logo.png'))
     
-    # parametri na butona
+
     button = QtGui.QPushButton('Close', window)
     button.clicked.connect(QtCore.QCoreApplication.instance().quit)
     button.move(50, 50)
