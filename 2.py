@@ -45,6 +45,7 @@ a is b
 b is a
 
 a = 5; b = 5; c = 5;
+
 import sys
 sys.getrefcount(5)
 
