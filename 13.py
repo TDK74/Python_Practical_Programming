@@ -1,13 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     print("Do something")
     
-import intertools
+import itertools
 intertools.count()
 
-import intertools as it
+import itertools as it
 it.count()
 
 import math as m
