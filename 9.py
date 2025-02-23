@@ -37,8 +37,8 @@ for i in it.count():
     if i > 15: break
     print(i, end = " ")
     
-list(it.repeat('*', 10))    # списък от '*'
-list(zip(it.repeat(3), 'abc'))    # комбинация от функциите zip() и repeat()
+list(it.repeat('*', 10))
+list(zip(it.repeat(3), 'abc'))
 list(it.combinations('abc', 2))
 list(it.combinations_with_replacement([1, 2, 3], 2))
 list(it.permutations('abc', 2))
