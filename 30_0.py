@@ -14,43 +14,43 @@ ip in net
 
 
 from urllib import request, parse
-# URL, kam koito se osyshtestviava dostyp
+
 url = 'http://example.com/script.php'
-# rechnik s parametrite na zaiavkata (ako sashtestvuva)
+
 parms = {
     'var1' : 'value1',
     'var2' : 'value2'
 }
-# kodirane na niza na zaiavkata
+
 querystring = parse.urlencode(parms)
-# izpylnenie na GET zaiavkata i prochitane na rezultata
+
 u = request.urlopen(url + '?' + querystring)
 resp = u.read()
 
 
 from urllib import request, parse
-# URL, kam koito se osyshtestviava dostyp
+
 url = 'http://example.com/script.php'
-# rechnik s parametrite na zaiavkata (ako sashtestvuva)
+
 parms = {
     'name1' : 'value1',
     'name2' : 'value2'
 }
-# kodirane na niza na zaiavkata
+
 querystring = parse.urlencode(parms)
-# izpylnenie na POST zaiavkata i prochitane na rezultata
+
 u = request.urlopen(url, querystring.encode('ascii'))
 resp = u.read()
 
 
 from urllib import request, parse
 # ...
-# dopalnitelni zaglavia
+
 headers = {
     'User-agent' : 'My Phyton Browser'
 }
 req = request.Request(url, querystring.encode('ascii'), headers = headers)
-# izpylnenie na zaiavka i prochitane na otgovora
+
 u = request.urlopen(req)
 resp = u.read()
 
