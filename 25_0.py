@@ -20,6 +20,7 @@ if any(name.endswith('.py', '.pyw') for name in listdir(dirname)):
     # ...
 
 s = 'field1 field2; field3, field4,field5, field6'
+
 import re
 re.split(r'[;,\s]\s*', s)
 
@@ -41,6 +42,7 @@ text = 'Lorem ipsum dolor sit amet.'
 text.replace('Lorem', 'Ipsim')
 
 text = '03/03/2015.'
+
 import re
 re.sub(r'(\d+)/(\d+)/(\d+)', r'\3-\1-\2', text)
 
@@ -53,23 +55,23 @@ re.findall('python', text, flags = re.IGNORECASE)
 
 import re
 num = re.compile('\d+')
-# ASCII cifri
+
 num.match('123456')
-# Arabski cifri
+
 num.match('\u0661\u0662\u0663')
 
 arabic = re.compile('[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]+')
 
 p = re.compile('hell\u00dfe', re.IGNORECASE)
 s = 'hello'
-p.match(s)          # saotvetstva
-p.match(s.upper())  # ne saotvetstva
-s.upper()           # privejda kam edinen registar
+p.match(s)
+p.match(s.upper())
+s.upper()
 
 import unicodedata
 s = unicodedata.normalize('NFD', s)
 
-# premahvane na simvolite za prazno prostranstvo
+
 s = ' hello world \n '
 s.strip()
 s = ' hello world \n '
@@ -77,7 +79,7 @@ s.lstrip()
 s = ' hello world \n '
 s.rstrip()
 
-# premahvane na zadadenite simvoli
+
 t = '-----hello====='
 t.lstrip('-')
 t.strip('-=')
@@ -102,7 +104,9 @@ x = 2.2345
 format(x, '>10')
 format(x, '^10.2f')
 
-s = "Lorem lpsum dolor sit amet, consectetur adipiscing ellt. Curabltur tempor nunc a porttitor convallis. Vivamus eget dui purus. Nam feugiat ex non eros viverra posuere."
+s = "Lorem lpsum dolor sit amet, consectetur adipiscing ellt. Curabltur tempor nunc a porttitor convallis. \
+    Vivamus eget dui purus. Nam feugiat ex non eros viverra posuere."
+
 import textwrap
 print(textwrap.fill(s, 70))
 print(textwrap.fill(s, 40))
@@ -134,8 +138,6 @@ _.lastgroup, _.group()
 scan.match()
 _.lastgroup, _.group()
 scan.match()
-
-
 
 import re
 NAME = r'(?P<NAME>[a-zA-Z_][a-zA-Z_0-9]*)'
