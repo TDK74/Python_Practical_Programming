@@ -58,7 +58,7 @@ print("1" "2")
 s = "1", "2"
 type(s)
 
-print("3" s)
+print("3", s)
 
 "hell" in "Hello"
 "hell" in "hello"
@@ -127,30 +127,27 @@ ascii("Асеневци")
 
 len("Асеневци")
 
-# премахване на символиза празно пространство
 s = " hello \n"
 s.strip()
-# методите работят с копия на низа,
-# затова оригиналният низ няма да се промени
 s
 s.lstrip()
 s.rstrip()
 
-# методът split() без параметри
+
 s = "field1 field2 field3"
 s.split()
 s.split(None, 1)
 
-# методът partition()
+
 s.partition(" ")
 s.rpartition(" ")
 
-# пример с използване на join()
+
 sep = " "
 s1 = sep.join(["field1", "field2"])
 s1
 
-# функция за промяна на регистъра
+
 s = "hello, world"
 s.capitalize()
 s.title()
