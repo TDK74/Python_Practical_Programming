@@ -16,17 +16,14 @@ btn = QPushButton('Click me', w)
 
 @pyqtSlot()
 def on_click():
-    ''' izvikva se pri klikvane s butona.'''
     print('clicked')
     
 @pyqtSlot()
 def on_press():
-    ''' izvikva se pri natisnat butona.'''
     print('pressed')    
 
 @pyqtSlot()
 def on_release():
-    ''' izvikva se, kogato butona se otpusne.'''
     print('released')
     
 
@@ -92,7 +89,7 @@ class Window(QtGui.QMainWindow):
                 pos = event.pos()
                 self.edit.setText('x: %d, y: %d' % (pos.x(), pos.y()))
             else:
-                pass # pravim neshto drugo
+                pass
                 
         return QtGui.QMainWindow.eventFilter(self, source, event)
         
