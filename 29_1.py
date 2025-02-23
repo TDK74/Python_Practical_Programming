@@ -9,7 +9,7 @@ def hello(n):
         n -= 1
         time.sleep(3)
         
-# sazdavane i startirane na nishka
+
 from threading import Thread
 t = Thread(target = hello, args = (100, ))
 t.start()
