@@ -5,9 +5,7 @@ import sys
 from PyQt4 import QtGui
 
 def main():
-    # predavane na argumentite na prilojenieto,
-    # ukazani v komandnia red
-    
+   
     app = QtGui.QApplication(sys.argv)
     
     window = QtGui.QWidget()
