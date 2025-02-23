@@ -10,7 +10,7 @@ print('# comment')
 # comment
 
 """
-multiline
+multilines
 comment
 """
 
