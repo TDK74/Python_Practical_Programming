@@ -35,7 +35,7 @@ t.repeat()
 
 from time import *
 t1 = time()
-# Код, чието време за изпълнение трябва да измерим
+
 print('Hello')
 t2 = time()
 t = t2 - t1
