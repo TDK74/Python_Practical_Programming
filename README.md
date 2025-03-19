@@ -1,4 +1,4 @@
-# Python_Practical_Programming
+# Python Practical Programming
 Code examples from the book "Python - Practical Programming" by Denis Kolisnichenko.
 
 ## Note:
